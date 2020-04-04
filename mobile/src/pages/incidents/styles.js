@@ -23,10 +23,14 @@ export default StyleSheet.create({
         fontWeight: 'bold'
     },
 
+    aboutUs: {
+
+    },
+
     title: {
         fontSize : 30,   
         marginBottom: 16,
-        marginTop: 48,
+        marginTop: 35,
         color: '#131A',
         fontWeight: 'bold'
     },
@@ -38,14 +42,24 @@ export default StyleSheet.create({
     },
 
     incidentList: {
-        marginTop: 32,
+        marginTop: 32,       
+        borderColor: '#E02041',
+        marginBottom: 30
     },
 
     incident: {
         padding: 24,
-        borderRadius: 18,
+        borderRadius: 18,       
         backgroundColor: '#FFF',
         marginBottom: 16,
+        shadowColor: "#E02041",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 40,
+        elevation: 6
     },
 
     incidentProperty: {
@@ -71,5 +85,21 @@ export default StyleSheet.create({
         color: '#E02041',
         fontSize: 15,
         fontWeight: 'bold'
+    },
+
+    action:{
+        backgroundColor:'#E02041',
+        borderRadius:8,
+        height:40,
+        width:'35%',
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop: 35,
+    },
+
+    actionText:{
+        color:'#FFF',
+        fontSize:15,
+        fontWeight:'bold'
     }
 });

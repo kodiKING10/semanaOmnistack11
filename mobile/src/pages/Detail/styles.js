@@ -14,12 +14,27 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
 
+    introIncident: {
+        marginTop: 45,
+        fontSize: 16,
+        lineHeight: 24,
+        color: '#737380'
+    },
+
     incident: {
         padding: 24,
         borderRadius: 18,
         backgroundColor: '#FFF',
         marginBottom: 16,
-        marginTop: 48
+        marginTop: 38,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.30,
+        shadowRadius: 4.65,
+        elevation: 8,    
     },
 
     incidentProperty: {
@@ -40,8 +55,16 @@ export default StyleSheet.create({
         padding: 24,
         borderRadius: 18,
         backgroundColor: '#FFF',
-        marginBottom: 16,
-        marginTop: 12
+        marginBottom: 80,
+        marginTop: 12,
+        shadowColor: "#E02041",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 40,
+        elevation: 6
     },
 
     heroTitle:{
@@ -69,7 +92,7 @@ export default StyleSheet.create({
         height:50,
         width:'48%',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
     },
 
     actionText:{

@@ -19,6 +19,10 @@ export default function Incidents(){
         navigation.navigate('Detail', { incident } );
     };
 
+    function navigateToAboutUs(){
+        navigation.navigate('AboutUs');
+    };
+
     async function loadIncidents(){
         if(loading){
             return;
@@ -48,18 +52,24 @@ export default function Incidents(){
             <View style={styles.header}>
                 <Image source={logoImg} />
                 <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>{total} casos.</Text>
+                    Temos <Text style={styles.headerTextBold}>{total} casos.</Text>
                 </Text>
             </View>
 
+            <View styles={styles.aboutUs}>
+                <TouchableOpacity style={styles.action} onPress={() => navigateToAboutUs()}>
+                    <Text style={styles.actionText}>Sobre nós!</Text>
+                </TouchableOpacity>
+            </View>
+
             <Text style={styles.title}> Bem-vindo!</Text>
-            <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia.</Text>
+            <Text style={styles.description}>Ajude ONGs com diferentes problemas ao redor de todo o Brasil e salve o dia!</Text>
 
             <FlatList 
                 style={styles.incidentList}
                 data={incidents}
                 keyExtractor={ incident => String(incident.id) }
-                showsVerticalScrollIndicator={true}
+                showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents}
                 onEndReachedThreshold={0.2}
                 renderItem={({ item: incident }) => (
@@ -86,7 +96,8 @@ export default function Incidents(){
                         </View>
                      </View>
                 )}
-            />         
+            />
+
         </View>
     );
 }
